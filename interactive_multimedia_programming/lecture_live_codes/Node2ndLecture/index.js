@@ -1,11 +1,12 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req,res){
-  res.send("Hello World");
-})
 
 app.use(express.static('public'))
+
+app.get('/', function (req,res){
+  res.sendFile('/index.html');
+})
 
 var PORT_NUMBER = 3000;
 app.listen(PORT_NUMBER, function(){
