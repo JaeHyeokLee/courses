@@ -1,0 +1,60 @@
+> = terminal command
+* = action
+- = desribe
+
+1. Tell about git
+  - Git is a version control system.
+  - Used for tracking changes in code files in sofrware development.
+    But could be used for any files as well.
+  - Created by Linus Torvalds
+  - If you use hosted git (in a cloud) it is a backup tool also.
+
+2. Tell about GitHub
+  - GitHub is a web based Git repository hosting service
+  - Free or paid plans available
+  - I am using free version for school projects ==> Everything is public.
+  * https://github.com => Show and describe the main page.
+
+3. Create a git repository.
+  - Repository stores your project files and history of changes to those files.
+  - You can have one or multiple repositories for your project. For example:
+    - 1 repository for iOS client project
+    - 1 repository for Android client project
+    - 1 repository for backend imeplementation (servers, databases, in a cloud)
+  - You create your repositories to GitHub easily. (Main page => New
+    repository).
+  * Create repository for backend. (Describe what backend means).
+    * Give a name reporter
+    * Write a description
+    * Tick README button. Tell audience about the README.md file.
+  - To use git you must have git software installed to your
+    development machine.
+      - There are multiple git clients, some have graphical user interface
+        but I'm using command line client.
+        https://git-scm.com/downloads
+
+4. Clone the repository
+  - Clone the repository to your development machine. Currently there
+    is only one file. The readme file.
+  > git clone git@github.com-oamk-veikko:oamk-veikko/reporter-demo.git
+  - Describe what we have just done.
+  - Create a simple text file and push it to remote repository
+  > cd reporter
+  > atom test.txt
+  - Write something to the file and save it.
+  > ls
+  > git status
+  > git add --all
+  > git status
+  > git commit -m"Demo change will do this and that."
+  > git push origin master
+  - Show now the repository in the web browser. New file is there.
+  - Show and describe the commit history. Open Pint Please repo!
+
+5. Create node.js / Heroku skeleton to repo
+  * Install node.js (Download packages from https://nodejs.org/en/)
+  - Node.js® is a JavaScript runtime built on Chrome's JavaScript engine.
+  - Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
+  - Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+  - We have installed npm client during the node.js installation
+  * Open terminal, goto repo you created in the previous step 
