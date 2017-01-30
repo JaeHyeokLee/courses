@@ -57,4 +57,54 @@
   - Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
   - Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
   - We have installed npm client during the node.js installation
-  * Open terminal, goto repo you created in the previous step 
+  * Open terminal, goto repo you created in the previous step
+  > atom index.js
+  * Write something to consle in the file like
+    console.log("Hello class!");
+  > node index.js
+  - Let's install express component using npm
+    - https://github.com/expressjs/express
+    - Express is a minimalistic web-framework for node. It means that it will
+      host web pages and apis for our demo today.
+    > npm install express
+    * open index.js again and modify it
+      console.log("Hello class!");
+      var express = require('express')
+      var app = express()
+
+      app.get('/', function (req, res) {
+        res.send('<h1>Hello class</h1><p>Lorem ipsum blah</p>')
+        })
+      app.listen(3000)
+    - OK, now we have installed node & express.
+    - Next we have to select a cloud service provider where we want to run our
+      solution. Currently everything is running in my pc.
+    - We will use Heroku PAAS (platform as a service) for our service. It's free
+      for non professional / critical (like we have here).
+    - First we need to install Heroku tools to our pc:
+      https://devcenter.heroku.com/articles/heroku-cli
+    - Next we create a simple getting started project with node for Heroku.
+      - We use Heroku's public git repo to download the code for it.
+      > git clone https://github.com/heroku/node-js-getting-started.git
+      * Delete existing files from the our own repo folder
+      * copy node-js-getting-started	stuff to this folder (one level up)
+    * Modify app.json & package.json files.
+    * Run the project locally first
+      > npm install (installs depencies)
+      > npm start
+    * Commit and push changes to git
+    > git status
+    > git add --all
+    > git commit -m"Heroku skeleton"
+    > git push origin master
+    - As next we will configure the Heroku to use this git repo.
+    > Go to Heroku web site.
+    > Click configure new app
+      > Set the name for the app & Europe region
+      > Click Connect to github button and configure git repo details.
+    - Describe the master branch selection here
+    > Click deploy branch button. Also describe what deploy word means in this
+      context.
+    > Click view button, the project is now live!
+
+    
